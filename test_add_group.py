@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
-from group import Group
+from parameter_objects import Group
 
 
 class TestAddGroup(unittest.TestCase):
