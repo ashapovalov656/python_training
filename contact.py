@@ -1,13 +1,5 @@
 
 
-class Group:
-
-    def __init__(self, name, header, footer):
-        self.name = name
-        self.header = header
-        self.footer = footer
-
-
 class Contact:
 
     def __init__(self, first_name, mid_name, last_name, nickname, photo, title, company_name, company_address,

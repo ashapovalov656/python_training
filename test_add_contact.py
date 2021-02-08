@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
-from parameter_objects import Contact
+from contact import Contact
 from datetime import date, datetime
 import os
 
