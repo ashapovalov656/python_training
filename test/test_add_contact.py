@@ -1,16 +1,7 @@
 # -*- coding: utf-8 -*-
-from fixture.application import Application
-import pytest
 from model.contact import Contact
 from datetime import date
 import os
-
-
-@pytest.fixture()
-def app(request):
-    fixture = Application()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 
 def test_add_contact_all_fields(app):
