@@ -14,7 +14,7 @@ def app(request):
 
 
 def test_add_contact_all_fields(app):
-    app.login(username="admin", password="secret")
+    app.session.login(username="admin", password="secret")
 
     contact = Contact(first_name="Василий", mid_name="Иванович", last_name="Чапаев", nickname="chapa",
                       photo=os.path.abspath("../files/chapaev.jpg"), title="my_title", company_name="ЦФТ",
@@ -25,4 +25,4 @@ def test_add_contact_all_fields(app):
                       home="qwertyasd", notes="Заметки123")
 
     app.add_contact(contact)
-    app.logout()
+    app.session.logout()
