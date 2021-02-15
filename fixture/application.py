@@ -72,8 +72,8 @@ class Application:
         wd.find_element_by_name("nickname").send_keys(contact.nickname)
 
         # telephone numbers, photo, company, etc
-        #wd.find_element_by_xpath("//input[@name='photo']").click()
-        #wd.find_element_by_xpath("//input[@name='photo']").clear()
+        # wd.find_element_by_xpath("//input[@name='photo']").click()
+        # wd.find_element_by_xpath("//input[@name='photo']").clear()
         wd.find_element_by_xpath("//input[@name='photo']").send_keys(contact.photo)
         wd.find_element_by_name("title").click()
         wd.find_element_by_name("title").clear()
@@ -105,7 +105,7 @@ class Application:
         wd.find_element_by_name("bday").click()
         Select(wd.find_element_by_name("bday")).select_by_visible_text(str(contact.birthday.day))
         wd.find_element_by_name("bmonth").click()
-        #Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.birthday.month)
+        # Select(wd.find_element_by_name("bmonth")).select_by_visible_text(contact.birthday.month)
         wd.find_element_by_xpath("//option[@value='"
                                  + datetime.strptime(str(contact.birthday.month), "%m").strftime("%B")
                                  + "']").click()
@@ -117,7 +117,7 @@ class Application:
         wd.find_element_by_name("aday").click()
         Select(wd.find_element_by_name("aday")).select_by_visible_text(str(contact.anniversary.day))
         wd.find_element_by_name("amonth").click()
-        #Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.anniversary.month)
+        # Select(wd.find_element_by_name("amonth")).select_by_visible_text(contact.anniversary.month)
         wd.find_element_by_xpath("(//option[@value='"
                                  + datetime.strptime(str(contact.anniversary.month), "%m").strftime("%B")
                                  + "'])[2]").click()
@@ -138,7 +138,6 @@ class Application:
         wd.find_element_by_name("notes").send_keys(contact.notes)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
         self.return_to_homepage()
-
 
     def destroy(self):
         self.wd.quit()

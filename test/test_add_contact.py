@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from application import Application
+from fixture.application import Application
 import pytest
-from contact import Contact
+from model.contact import Contact
 from datetime import date
 import os
 
@@ -17,7 +17,7 @@ def test_add_contact_all_fields(app):
     app.login(username="admin", password="secret")
 
     contact = Contact(first_name="Василий", mid_name="Иванович", last_name="Чапаев", nickname="chapa",
-                      photo=os.path.abspath("files/chapaev.jpg"), title="my_title", company_name="ЦФТ",
+                      photo=os.path.abspath("../files/chapaev.jpg"), title="my_title", company_name="ЦФТ",
                       company_address="Новосибирск", home_tel="3303030", mobile_tel="89131112233",
                       work_tel="2872727", fax="111111", email="a.chapaev@mail.ru", email_2="a.chapaev@yandex.ru",
                       email_3="a.chapaev@gmail.ru", homepage="homepage.com", birthday=date(1887, 2, 7),
