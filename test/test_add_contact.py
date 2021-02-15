@@ -24,5 +24,5 @@ def test_add_contact_all_fields(app):
                       anniversary=date(1917, 3, 7), home_address="г. Новосибирск, ул. Ленина, 33",
                       home="qwertyasd", notes="Заметки123")
 
-    app.add_contact(contact)
+    app.contact.create(contact)
     app.session.logout()
