@@ -5,8 +5,6 @@ import os
 
 
 def test_add_contact_all_fields(app):
-    app.session.login(username="admin", password="secret")
-
     contact = Contact(first_name="Василий", mid_name="Иванович", last_name="Чапаев", nickname="chapa",
                       photo=os.path.abspath("../files/chapaev.jpg"), title="my_title", company_name="ЦФТ",
                       company_address="Новосибирск", home_tel="3303030", mobile_tel="89131112233",
@@ -16,4 +14,3 @@ def test_add_contact_all_fields(app):
                       home="qwertyasd", notes="Заметки123")
 
     app.contact.create(contact)
-    app.session.logout()
