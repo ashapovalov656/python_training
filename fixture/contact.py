@@ -1,5 +1,7 @@
 from datetime import datetime
+import time
 from selenium.webdriver.support.ui import Select
+from model.contact import Contact
 
 
 class ContactHelper:
@@ -76,9 +78,11 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
+        self.app.return_to_homepage()
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
+        wd.find_element_by_css_selector("div.msgbox")
         self.app.return_to_homepage()
 
     def count(self):
@@ -86,5 +90,13 @@ class ContactHelper:
         self.app.return_to_homepage()
         return len(wd.find_elements_by_name("selected[]"))
 
-
-
+    def get_contacts_list(self):
+        wd = self.app.wd
+        self.app.return_to_homepage()
+        contacts = []
+        for element in wd.find_elements_by_xpath("//tr[@name='entry']"):
+            last_name = element.find_element_by_xpath("./td[2]").text
+            first_name = element.find_element_by_xpath("./td[3]").text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            contacts.append(Contact(id=id, first_name=first_name, last_name=last_name))
+        return contacts
