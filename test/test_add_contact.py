@@ -12,7 +12,7 @@ def test_add_contact_all_fields(app):
                       work_tel="2872727", fax="111111", email="a.chapaev@mail.ru", email_2="a.chapaev@yandex.ru",
                       email_3="a.chapaev@gmail.ru", homepage="homepage.com", birthday=date(1887, 2, 7),
                       anniversary=date(1917, 3, 7), home_address="г. Новосибирск, ул. Ленина, 33",
-                      home="qwertyasd", notes="Заметки123")
+                      home_tel_2="2870760", notes="Заметки123")
     app.contact.create(contact)
     assert len(old_contacts) + 1 == app.contact.count()
     new_contacts = app.contact.get_contacts_list()

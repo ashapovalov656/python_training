@@ -20,7 +20,7 @@ class Application:
         except:
             return False
 
-    def return_to_homepage(self):
+    def open_homepage(self):
         wd = self.wd
         if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_name("searchstring")) > 0):
             wd.find_element_by_link_text("home").click()
