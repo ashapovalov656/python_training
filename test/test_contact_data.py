@@ -2,6 +2,18 @@ from model.contact import Contact
 from datetime import date
 import os
 from random import randrange
+import re
+
+
+def clear(s):
+    return re.sub("[() -]", "", s)
+
+
+def merge_phones(contact):
+    return "\n".join(filter(lambda x: x != "",
+                            map(lambda x: clear(x),
+                                filter(lambda x: x is not None,
+                                       [contact.home_tel, contact.mobile_tel, contact.work_tel, contact.home_tel_2]))))
 
 
 def merge_emails(contact):
@@ -19,14 +31,15 @@ def test_all_fields_on_home_page(app):
                           birthday=date(1887, 2, 7), anniversary=date(1917, 3, 7),
                           home_address="г. Новосибирск, ул. Ленина, 33", home_tel_2="2870760", notes="Заметки123")
         app.contact.create(contact)
-    all_contacts = app.contact.get_contacts_list()
-    index = randrange(len(all_contacts))
-    selected_contact = all_contacts[index]
+    contacts_from_homepage = app.contact.get_contacts_list()
+    index = randrange(len(contacts_from_homepage))
     contact_from_edit_page = app.contact.get_info_from_edit_page(index)
+    contact_from_view_page = app.contact.get_contacts_from_view_page(index)
+    selected_contact = contacts_from_homepage[index]
 
     assert selected_contact.first_name == contact_from_edit_page.first_name and \
            selected_contact.last_name == contact_from_edit_page.last_name
-
     assert selected_contact.company_address == contact_from_edit_page.company_address
-
     assert selected_contact.all_emails_from_homepage == merge_emails(contact_from_edit_page)
+    assert contacts_from_homepage[index].all_phones_from_home_page == merge_phones(contact_from_edit_page)
+    assert merge_phones(contact_from_view_page) == merge_phones(contact_from_edit_page)
