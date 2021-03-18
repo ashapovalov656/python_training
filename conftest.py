@@ -1,7 +1,8 @@
 from fixture.application import Application
 import pytest
-import json
 import os.path
+import importlib
+import jsonpickle
 
 fixture = None
 target = None
@@ -15,7 +16,7 @@ def app(request):
     if target is None:
         config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), request.config.getoption("--config"))
         with open(config_file) as f:
-            target = json.load(f)
+            target = jsonpickle.decode(f.read())
     if fixture is None or not fixture.is_valid():
         fixture = Application(browser, target["baseUrl"])
     fixture.session.ensure_login(username=target["username"], password=target["password"])
@@ -37,3 +38,22 @@ def stop(request):
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="firefox")
     parser.addoption("--config", action="store", default="config.json")
+
+
+def pytest_generate_tests(metafunc):
+    for fixture in metafunc.fixturenames:
+        if fixture.startswith("data_"):
+            testdata = load_from_module(fixture[5:])
+            metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
+        elif fixture.startswith("json_"):
+            testdata = load_from_json(fixture[5:])
+            metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
+
+
+def load_from_module(module):
+    return importlib.import_module("data.%s" % module).testdata
+
+
+def load_from_json(filename):
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/%s.json" % filename)) as f:
+        return jsonpickle.decode(f.read())

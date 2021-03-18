@@ -1,0 +1,237 @@
+[
+  {
+    "py/object": "model.contact.Contact",
+    "id": null,
+    "first_name": "\u0412\u0430\u0441\u0438\u043b\u0438\u0439",
+    "mid_name": "\u0418\u0432\u0430\u043d\u043e\u0432\u0438\u0447",
+    "last_name": "\u0427\u0430\u043f\u0430\u0435\u0432",
+    "nickname": "chapa",
+    "photo": "C:\\python_projects\\python_training\\files\\chapaev.jpg",
+    "title": "my_title",
+    "company_name": "\u0426\u0424\u0422",
+    "company_address": "\u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a",
+    "home_tel": "3303030",
+    "mobile_tel": "89131112233",
+    "work_tel": "2872727",
+    "fax": "111111",
+    "email": "a.chapaev@mail.ru",
+    "email_2": "a.chapaev@yandex.ru",
+    "email_3": "a.chapaev@gmail.ru",
+    "homepage": "homepage.com",
+    "birthday": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "B18CBw=="
+        ]
+      ]
+    },
+    "anniversary": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "B30DBw=="
+        ]
+      ]
+    },
+    "home_address": "\u0433. \u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a, \u0443\u043b. \u041b\u0435\u043d\u0438\u043d\u0430, 33",
+    "home_tel_2": "2870760",
+    "notes": "\u0417\u0430\u043c\u0435\u0442\u043a\u0438123",
+    "all_phones_from_home_page": null,
+    "all_emails_from_homepage": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "id": null,
+    "first_name": "name",
+    "mid_name": "mid_nameBy;AJ",
+    "last_name": "last_name?",
+    "nickname": "nicknameKv?V  <",
+    "photo": null,
+    "title": "title#Vx%TotLD",
+    "company_name": "company_nameDv 5gB}:9~",
+    "company_address": "company_address;)D<EQ+Yg?9 M<Kj-7D 7 4",
+    "home_tel": "home_telu",
+    "mobile_tel": "company_name ",
+    "work_tel": "work_telV'Ks3",
+    "fax": "fax( s",
+    "email": "email i$\"Eln s\"^e",
+    "email_2": "email_2n5A`=}",
+    "email_3": "email_3t",
+    "homepage": "homepage",
+    "birthday": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "CWYCDQ=="
+        ]
+      ]
+    },
+    "anniversary": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "AtwDDA=="
+        ]
+      ]
+    },
+    "home_address": "home_address0v*v1h=vm  >#^KNUr+",
+    "home_tel_2": "home_tel_2x  yW`",
+    "notes": "notesAXv? Fb K@ yG0I nyGF=]zxKU",
+    "all_phones_from_home_page": null,
+    "all_emails_from_homepage": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "id": null,
+    "first_name": "name",
+    "mid_name": "mid_namegm*%h-",
+    "last_name": "last_namem`",
+    "nickname": "nicknameC)]<",
+    "photo": null,
+    "title": "titleQT<0>Z-?mob s~=",
+    "company_name": "company_name kJ",
+    "company_address": "company_address p9BE^m khxLLU1H",
+    "home_tel": "home_telZbOce}d",
+    "mobile_tel": "company_namew[+_w]L9",
+    "work_tel": "work_telbPp#Q",
+    "fax": "faxr\"",
+    "email": "emailMZg+[VL X",
+    "email_2": "email_2E;Q<",
+    "email_3": "email_3",
+    "homepage": "homepage<xWrqXQ",
+    "birthday": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "A9QMDw=="
+        ]
+      ]
+    },
+    "anniversary": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "BLEDHg=="
+        ]
+      ]
+    },
+    "home_address": "home_address+ 15dS",
+    "home_tel_2": "home_tel_2",
+    "notes": "notesEc6",
+    "all_phones_from_home_page": null,
+    "all_emails_from_homepage": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "id": null,
+    "first_name": "nameXn Q6D",
+    "mid_name": "mid_namebnQ",
+    "last_name": "last_name;JA-nh",
+    "nickname": "nicknamen X; 5QU",
+    "photo": null,
+    "title": "title:iVYiNenB8 ZFeF\"1e",
+    "company_name": "company_name\\++{ozOdOOSiF",
+    "company_address": "company_address%rs }4oG[#BP",
+    "home_tel": "home_tel",
+    "mobile_tel": "company_nameR?#",
+    "work_tel": "work_tel [dVP",
+    "fax": "faxIrF!y)",
+    "email": "emailZQqyP 4~M 5BUd",
+    "email_2": "email_2s>| ,0C",
+    "email_3": "email_3a [b]",
+    "homepage": "homepage8^%@oWORw4:",
+    "birthday": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "AEoFEA=="
+        ]
+      ]
+    },
+    "anniversary": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "CAgMGQ=="
+        ]
+      ]
+    },
+    "home_address": "home_addressMxo=S~)$J",
+    "home_tel_2": "home_tel_2|O:",
+    "notes": "notesS K``<7&R< ryP|PX( 4pl) ",
+    "all_phones_from_home_page": null,
+    "all_emails_from_homepage": null
+  },
+  {
+    "py/object": "model.contact.Contact",
+    "id": null,
+    "first_name": "nameBWE\\F4&d",
+    "mid_name": "mid_namen3`s `",
+    "last_name": "last_name}",
+    "nickname": "nicknameL\\",
+    "photo": null,
+    "title": "title]5'z`d k",
+    "company_name": "company_name%TKJ",
+    "company_address": "company_address]bIcMeG7  3U{1DGmzlz",
+    "home_tel": "home_telt",
+    "mobile_tel": "company_nameUp:AjU^%",
+    "work_tel": "work_tel",
+    "fax": "faxNZlpEr7 ",
+    "email": "emailn=iXd8U*G$.",
+    "email_2": "email_2l+k U",
+    "email_3": "email_3H2@d<Y@{",
+    "homepage": "homepage2~RiR8 ,R /",
+    "birthday": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "BToBEg=="
+        ]
+      ]
+    },
+    "anniversary": {
+      "py/object": "datetime.date",
+      "__reduce__": [
+        {
+          "py/type": "datetime.date"
+        },
+        [
+          "Ao8FEQ=="
+        ]
+      ]
+    },
+    "home_address": "home_address/r{U7",
+    "home_tel_2": "home_tel_26%'w",
+    "notes": "notesKRw%^qSb=Nt&t]_HhD~.L{\">_ ",
+    "all_phones_from_home_page": null,
+    "all_emails_from_homepage": null
+  }
+]
