@@ -2,14 +2,14 @@
   {
     "py/object": "model.contact.Contact",
     "id": null,
-    "first_name": "\u0412\u0430\u0441\u0438\u043b\u0438\u0439",
-    "mid_name": "\u0418\u0432\u0430\u043d\u043e\u0432\u0438\u0447",
-    "last_name": "\u0427\u0430\u043f\u0430\u0435\u0432",
+    "firstname": "Василий",
+    "mid_name": "Иванович",
+    "lastname": "Чапаев",
     "nickname": "chapa",
     "photo": "C:\\python_projects\\python_training\\files\\chapaev.jpg",
     "title": "my_title",
-    "company_name": "\u0426\u0424\u0422",
-    "company_address": "\u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a",
+    "company_name": "ЦФТ",
+    "company_address": "Новосибирск",
     "home_tel": "3303030",
     "mobile_tel": "89131112233",
     "work_tel": "2872727",
@@ -40,30 +40,30 @@
         ]
       ]
     },
-    "home_address": "\u0433. \u041d\u043e\u0432\u043e\u0441\u0438\u0431\u0438\u0440\u0441\u043a, \u0443\u043b. \u041b\u0435\u043d\u0438\u043d\u0430, 33",
+    "home_address": "г. Новосибирск, ул. Ленина, 33",
     "home_tel_2": "2870760",
-    "notes": "\u0417\u0430\u043c\u0435\u0442\u043a\u0438123",
+    "notes": "Заметки123",
     "all_phones_from_home_page": null,
     "all_emails_from_homepage": null
   },
   {
     "py/object": "model.contact.Contact",
     "id": null,
-    "first_name": "name",
-    "mid_name": "mid_nameBy;AJ",
-    "last_name": "last_name?",
-    "nickname": "nicknameKv?V  <",
+    "firstname": "nameAWqtRig",
+    "mid_name": "mid_name&7",
+    "lastname": "last_nameHIPm@4y",
+    "nickname": "nickname&<;3(",
     "photo": null,
-    "title": "title#Vx%TotLD",
-    "company_name": "company_nameDv 5gB}:9~",
-    "company_address": "company_address;)D<EQ+Yg?9 M<Kj-7D 7 4",
-    "home_tel": "home_telu",
-    "mobile_tel": "company_name ",
-    "work_tel": "work_telV'Ks3",
-    "fax": "fax( s",
-    "email": "email i$\"Eln s\"^e",
-    "email_2": "email_2n5A`=}",
-    "email_3": "email_3t",
+    "title": "title6 5G0Ts~;XA",
+    "company_name": "company_nameCx`m:miN~",
+    "company_address": "company_address _nlJ (|'K",
+    "home_tel": "home_tel>!f?TP",
+    "mobile_tel": "company_name 3]3a",
+    "work_tel": "work_telI{W",
+    "fax": "fax{'!nD]",
+    "email": "email Cc J?N2\"5\\",
+    "email_2": "email_2@6 Te'u",
+    "email_3": "email_3q'o8(~^[4 KHw^",
     "homepage": "homepage",
     "birthday": {
       "py/object": "datetime.date",
@@ -72,7 +72,7 @@
           "py/type": "datetime.date"
         },
         [
-          "CWYCDQ=="
+          "B8kCAQ=="
         ]
       ]
     },
@@ -83,35 +83,35 @@
           "py/type": "datetime.date"
         },
         [
-          "AtwDDA=="
+          "APgMGw=="
         ]
       ]
     },
-    "home_address": "home_address0v*v1h=vm  >#^KNUr+",
-    "home_tel_2": "home_tel_2x  yW`",
-    "notes": "notesAXv? Fb K@ yG0I nyGF=]zxKU",
+    "home_address": "home_address",
+    "home_tel_2": "home_tel_2gM",
+    "notes": "notesxI/+Tk1g< qK&~\\^Q>7p }:18^",
     "all_phones_from_home_page": null,
     "all_emails_from_homepage": null
   },
   {
     "py/object": "model.contact.Contact",
     "id": null,
-    "first_name": "name",
-    "mid_name": "mid_namegm*%h-",
-    "last_name": "last_namem`",
-    "nickname": "nicknameC)]<",
+    "firstname": "name9@hJn",
+    "mid_name": "mid_nameJrJ",
+    "lastname": "last_nameg6 .H",
+    "nickname": "nicknamezo",
     "photo": null,
-    "title": "titleQT<0>Z-?mob s~=",
-    "company_name": "company_name kJ",
-    "company_address": "company_address p9BE^m khxLLU1H",
-    "home_tel": "home_telZbOce}d",
-    "mobile_tel": "company_namew[+_w]L9",
-    "work_tel": "work_telbPp#Q",
-    "fax": "faxr\"",
-    "email": "emailMZg+[VL X",
-    "email_2": "email_2E;Q<",
-    "email_3": "email_3",
-    "homepage": "homepage<xWrqXQ",
+    "title": "title-o _X*Yi<iqH2#",
+    "company_name": "company_name!?J tq c5@",
+    "company_address": "company_address|Efs1/ B*~4_)",
+    "home_tel": "home_telP",
+    "mobile_tel": "company_name%r)3 &",
+    "work_tel": "work_tel/k<_Y",
+    "fax": "fax",
+    "email": "email!$,",
+    "email_2": "email_2-P` Od>,A",
+    "email_3": "email_3e2@ ,q7t)",
+    "homepage": "homepagevd0fjr? oK?",
     "birthday": {
       "py/object": "datetime.date",
       "__reduce__": [
@@ -119,7 +119,7 @@
           "py/type": "datetime.date"
         },
         [
-          "A9QMDw=="
+          "BTYLAw=="
         ]
       ]
     },
@@ -130,35 +130,35 @@
           "py/type": "datetime.date"
         },
         [
-          "BLEDHg=="
+          "CAQKAQ=="
         ]
       ]
     },
-    "home_address": "home_address+ 15dS",
-    "home_tel_2": "home_tel_2",
-    "notes": "notesEc6",
+    "home_address": "home_address:",
+    "home_tel_2": "home_tel_2 ?F\\G+T",
+    "notes": "notes/oom}1GFe:dG+a>Gmt }JvS|f.",
     "all_phones_from_home_page": null,
     "all_emails_from_homepage": null
   },
   {
     "py/object": "model.contact.Contact",
     "id": null,
-    "first_name": "nameXn Q6D",
-    "mid_name": "mid_namebnQ",
-    "last_name": "last_name;JA-nh",
-    "nickname": "nicknamen X; 5QU",
+    "firstname": "namer~",
+    "mid_name": "mid_name$*O F",
+    "lastname": "last_name$$N",
+    "nickname": "nicknameC  4",
     "photo": null,
-    "title": "title:iVYiNenB8 ZFeF\"1e",
-    "company_name": "company_name\\++{ozOdOOSiF",
-    "company_address": "company_address%rs }4oG[#BP",
-    "home_tel": "home_tel",
-    "mobile_tel": "company_nameR?#",
-    "work_tel": "work_tel [dVP",
-    "fax": "faxIrF!y)",
-    "email": "emailZQqyP 4~M 5BUd",
-    "email_2": "email_2s>| ,0C",
-    "email_3": "email_3a [b]",
-    "homepage": "homepage8^%@oWORw4:",
+    "title": "titleS^j)kMq%q|IfCy",
+    "company_name": "company_name19Z",
+    "company_address": "company_address z4u E8v",
+    "home_tel": "home_telKK",
+    "mobile_tel": "company_name K]$K",
+    "work_tel": "work_telo8 Rk",
+    "fax": "fax",
+    "email": "emailR%1",
+    "email_2": "email_2,fO9cp9jw671m",
+    "email_3": "email_3  nnX7Y",
+    "homepage": "homepagesiKO i",
     "birthday": {
       "py/object": "datetime.date",
       "__reduce__": [
@@ -166,7 +166,7 @@
           "py/type": "datetime.date"
         },
         [
-          "AEoFEA=="
+          "BJwEAg=="
         ]
       ]
     },
@@ -177,35 +177,35 @@
           "py/type": "datetime.date"
         },
         [
-          "CAgMGQ=="
+          "AYQCEQ=="
         ]
       ]
     },
-    "home_address": "home_addressMxo=S~)$J",
-    "home_tel_2": "home_tel_2|O:",
-    "notes": "notesS K``<7&R< ryP|PX( 4pl) ",
+    "home_address": "home_addressH7,N|1kP/2!EF|f",
+    "home_tel_2": "home_tel_2=Lv",
+    "notes": "notes8>5}|[N%* l/o $%\"y\":e ZzRHf_  p1t",
     "all_phones_from_home_page": null,
     "all_emails_from_homepage": null
   },
   {
     "py/object": "model.contact.Contact",
     "id": null,
-    "first_name": "nameBWE\\F4&d",
-    "mid_name": "mid_namen3`s `",
-    "last_name": "last_name}",
-    "nickname": "nicknameL\\",
+    "firstname": "name\\#Fp",
+    "mid_name": "mid_name kl n",
+    "lastname": "last_name/h D",
+    "nickname": "nicknameFo",
     "photo": null,
-    "title": "title]5'z`d k",
-    "company_name": "company_name%TKJ",
-    "company_address": "company_address]bIcMeG7  3U{1DGmzlz",
-    "home_tel": "home_telt",
-    "mobile_tel": "company_nameUp:AjU^%",
+    "title": "title&3",
+    "company_name": "company_nameq\\?sU",
+    "company_address": "company_address5~u3TD XDw",
+    "home_tel": "home_tel.%6N",
+    "mobile_tel": "company_nameSn9Y)-!R",
     "work_tel": "work_tel",
-    "fax": "faxNZlpEr7 ",
-    "email": "emailn=iXd8U*G$.",
-    "email_2": "email_2l+k U",
-    "email_3": "email_3H2@d<Y@{",
-    "homepage": "homepage2~RiR8 ,R /",
+    "fax": "fax sW#, U",
+    "email": "email$NlRlii",
+    "email_2": "email_2",
+    "email_3": "email_3|kk] A3!Ed6:N",
+    "homepage": "homepageP2 X\"sVp",
     "birthday": {
       "py/object": "datetime.date",
       "__reduce__": [
@@ -213,7 +213,7 @@
           "py/type": "datetime.date"
         },
         [
-          "BToBEg=="
+          "AiQIDQ=="
         ]
       ]
     },
@@ -224,13 +224,13 @@
           "py/type": "datetime.date"
         },
         [
-          "Ao8FEQ=="
+          "CZgEHA=="
         ]
       ]
     },
-    "home_address": "home_address/r{U7",
-    "home_tel_2": "home_tel_26%'w",
-    "notes": "notesKRw%^qSb=Nt&t]_HhD~.L{\">_ ",
+    "home_address": "home_addressDR&`>",
+    "home_tel_2": "home_tel_2",
+    "notes": "notesW{& UA MFMka ZJ}`Y ,\"\":.!}Y0M",
     "all_phones_from_home_page": null,
     "all_emails_from_homepage": null
   }

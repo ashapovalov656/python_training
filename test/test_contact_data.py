@@ -21,9 +21,9 @@ def merge_emails(contact):
                             filter(lambda x: x is not None, [contact.email, contact.email_2, contact.email_3])))
 
 
-def test_all_fields_on_home_page(app):
-    if app.contact.count() == 0:
-        contact = Contact(first_name="Василий", mid_name="Иванович", last_name="Чапаев", nickname="chapa",
+def test_all_fields_on_home_page(app, orm):
+    if len(orm.get_contact_list()) == 0:
+        contact = Contact(firstname="Василий", mid_name="Иванович", lastname="Чапаев", nickname="chapa",
                           photo=os.path.abspath("../files/chapaev.jpg"), title="my_title", company_name="ЦФТ",
                           company_address="г. Новосибирск, ул. Мусы Джалиля, 11", home_tel="3303030",
                           mobile_tel="89131112233", work_tel="2872727", fax="111111", email="a.chapaev@mail.ru",
@@ -37,8 +37,8 @@ def test_all_fields_on_home_page(app):
     contact_from_view_page = app.contact.get_contacts_from_view_page(index)
     selected_contact = contacts_from_homepage[index]
 
-    assert selected_contact.first_name == contact_from_edit_page.first_name and \
-           selected_contact.last_name == contact_from_edit_page.last_name
+    assert selected_contact.firstname == contact_from_edit_page.firstname and \
+           selected_contact.lastname == contact_from_edit_page.lastname
     assert selected_contact.company_address == contact_from_edit_page.company_address
     assert selected_contact.all_emails_from_homepage == merge_emails(contact_from_edit_page)
     assert contacts_from_homepage[index].all_phones_from_home_page == merge_phones(contact_from_edit_page)

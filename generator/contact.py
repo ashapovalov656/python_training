@@ -23,15 +23,15 @@ for o, a in opts:
         f = a
 
 
-testdata = [Contact(first_name="Василий", mid_name="Иванович", last_name="Чапаев", nickname="chapa",
+testdata = [Contact(firstname="Василий", mid_name="Иванович", lastname="Чапаев", nickname="chapa",
                     photo=os.path.abspath("../files/chapaev.jpg"), title="my_title", company_name="ЦФТ",
                     company_address="Новосибирск", home_tel="3303030", mobile_tel="89131112233",
                     work_tel="2872727", fax="111111", email="a.chapaev@mail.ru", email_2="a.chapaev@yandex.ru",
                     email_3="a.chapaev@gmail.ru", homepage="homepage.com", birthday=date(1887, 2, 7),
                     anniversary=date(1917, 3, 7), home_address="г. Новосибирск, ул. Ленина, 33",
                     home_tel_2="2870760", notes="Заметки123")] + [
-    Contact(first_name=random_string("name", 10), mid_name=random_string("mid_name", 10),
-            last_name=random_string("last_name", 10), nickname=random_string("nickname", 10),
+    Contact(firstname=random_string("name", 10), mid_name=random_string("mid_name", 10),
+            lastname=random_string("last_name", 10), nickname=random_string("nickname", 10),
             title=random_string("title", 20), company_name=random_string("company_name", 15),
             company_address=random_string("company_address", 25), home_tel=random_string("home_tel", 10),
             mobile_tel=random_string("company_name", 10), work_tel=random_string("work_tel", 10),
@@ -44,6 +44,7 @@ testdata = [Contact(first_name="Василий", mid_name="Иванович", la
 
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f)
 
-with open(file, "w") as out:
-    jsonpickle.set_encoder_options("json", indent=2)
+with open(file, "w", encoding="utf-8") as out:
+    jsonpickle.set_preferred_backend('json')
+    jsonpickle.set_encoder_options('json', ensure_ascii=False, indent=2)
     out.write(jsonpickle.encode(testdata))
