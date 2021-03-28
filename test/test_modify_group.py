@@ -18,7 +18,7 @@ def test_modify_group_name(app, orm, check_ui):
     old_groups = orm.get_group_list()
     index = randrange(len(old_groups))
     group = Group(id=old_groups[index].id, name="GroupName")
-    app.group.modify_group_by_index(group, index)
+    app.group.modify_group_by_id(group, group.id)
     assert len(old_groups) == len(orm.get_group_list())
     new_groups = orm.get_group_list()
     old_groups[index] = group

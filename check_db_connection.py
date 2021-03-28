@@ -2,6 +2,7 @@ import pymysql.cursors
 from fixture.db import DbFixture
 from fixture.orm import ORMFixture
 from model.group import Group
+import re
 
 
 """

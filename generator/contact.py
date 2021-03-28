@@ -34,7 +34,7 @@ testdata = [Contact(firstname="Василий", mid_name="Иванович", las
             lastname=random_string("last_name", 10), nickname=random_string("nickname", 10),
             title=random_string("title", 20), company_name=random_string("company_name", 15),
             company_address=random_string("company_address", 25), home_tel=random_string("home_tel", 10),
-            mobile_tel=random_string("company_name", 10), work_tel=random_string("work_tel", 10),
+            mobile_tel=random_string("mobile_tel", 10), work_tel=random_string("work_tel", 10),
             fax=random_string("fax", 10), email=random_string("email", 15), email_2=random_string("email_2", 15),
             email_3=random_string("email_3", 15), homepage=random_string("homepage", 15), birthday=random_date(),
             anniversary=random_date(), home_address=random_string("home_address", 20),
