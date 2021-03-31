@@ -1,10 +1,10 @@
 from model.contact import Contact
+from helpers import create_contact_if_empty
 import random
 
 
 def test_delete_contact_by_id(app, orm, check_ui):
-    if len(orm.get_contact_list()) == 0:
-        app.contact.create(Contact(firstname="Default_name", lastname="Default_lastname"))
+    create_contact_if_empty(app, orm)
     old_contacts = orm.get_contact_list()
     contact = random.choice(old_contacts)
     app.contact.delete_contact_by_id(contact.id)

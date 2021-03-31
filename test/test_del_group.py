@@ -1,10 +1,10 @@
 from model.group import Group
 import random
+from helpers import create_group_if_empty
 
 
 def test_del_some_group(app, orm, check_ui):
-    if len(orm.get_group_list()) == 0:
-        app.group.create(Group(name="default group", header="default header", footer="default footer"))
+    create_group_if_empty(app, orm)
     old_groups = orm.get_group_list()
     group = random.choice(old_groups)
     app.group.delete_group_by_id(group.id)

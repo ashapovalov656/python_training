@@ -1,13 +1,13 @@
 from model.contact import Contact
+from helpers import create_contact_if_empty
 from random import randrange
 
 
 def test_edit_contact_by_id(app, orm, check_ui):
-    if app.contact.count() == 0:
-        app.contact.create(Contact(firstname="Default_name", lastname="Default_lastname"))
+    create_contact_if_empty(app, orm)
     old_contacts = orm.get_contact_list()
     index = randrange(len(old_contacts))
-    contact = Contact(id=old_contacts[index].id, firstname="Новое_имя", lastname="Новая_фамилия_2")
+    contact = Contact(id=old_contacts[index].id, firstname="Новое_имя", lastname="Новая_фамилия")
     app.contact.edit_contact_by_id(contact, contact.id)
     assert len(old_contacts) == len(orm.get_contact_list())
     new_contacts = orm.get_contact_list()

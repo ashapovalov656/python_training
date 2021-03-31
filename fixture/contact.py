@@ -65,6 +65,7 @@ class ContactHelper:
 
     def create(self, contact):
         wd = self.app.wd
+        self.app.open_homepage()
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(contact)
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
@@ -76,6 +77,7 @@ class ContactHelper:
 
     def edit_contact_by_index(self, contact, index):
         wd = self.app.wd
+        self.app.open_homepage()
         wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         self.fill_contact_form(contact)
         wd.find_element_by_name("update").click()
@@ -111,16 +113,26 @@ class ContactHelper:
 
     def edit_contact_by_id(self, contact, id):
         wd = self.app.wd
-        #wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
+        self.app.open_homepage()
         wd.find_element_by_xpath("//a[@href='edit.php?id=%s']" % id).click()
         self.fill_contact_form(contact)
         wd.find_element_by_name("update").click()
         self.app.open_homepage()
         self.contact_cache = None
 
-    def select_contact_by_id(self, id):
+    def add_contact_to_group(self, contact_id, group_id):
         wd = self.app.wd
-        wd.find_element_by_css_selector("input[id='%s']" % id).click()
+        self.app.open_homepage()
+        self.select_contact_by_id(contact_id)
+        wd.find_element_by_name("to_group").click()
+        wd.find_element_by_xpath("(//option[@value='%s'])[2]" % group_id).click()
+        wd.find_element_by_name("add").click()
+        self.app.open_homepage()
+        self.contact_cache = None
+
+    def select_contact_by_id(self, contact_id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[id='%s']" % contact_id).click()
 
     def count(self):
         wd = self.app.wd
@@ -186,3 +198,25 @@ class ContactHelper:
         mobile_tel = re.search("M: (.*)", text).group(1)
         home_tel_2 = re.search("P: (.*)", text).group(1)
         return Contact(home_tel=home_tel, mobile_tel=mobile_tel, work_tel=work_tel, home_tel_2=home_tel_2)
+
+    def open_contacts_in_group(self, group_id):
+        wd = self.app.wd
+        wd.find_element_by_name("group").click()
+        wd.find_element_by_xpath("//option[@value='%s']" % group_id).click()
+
+    def check_contact_in_group(self, group_id, contact_id):
+        wd = self.app.wd
+        self.app.open_homepage()
+        self.open_contacts_in_group(group_id)
+
+        if len(wd.find_elements_by_css_selector("input[id='%s']" % contact_id)) == 1:
+            return True
+
+        return False
+
+    def del_contact_from_group(self, group_id, contact_id):
+        wd = self.app.wd
+        self.app.open_homepage()
+        self.open_contacts_in_group(group_id)
+        self.select_contact_by_id(contact_id)
+        wd.find_element_by_name("remove").click()

@@ -46,7 +46,8 @@ class ORMFixture:
         def convert(c):
             return Contact(id=str(c.id), firstname=c.firstname, lastname=c.lastname, company_address=c.company_address,
                            email=c.email, email_2=c.email_2, email_3=c.email_3, home_tel=c.home_tel,
-                           mobile_tel=c.mobile_tel, work_tel=c.work_tel, home_tel_2=c.home_tel_2)
+                           mobile_tel=c.mobile_tel, work_tel=c.work_tel, home_tel_2=c.home_tel_2,
+                           groups=self.convert_groups_to_model(c.groups))
         return list(map(convert, contacts))
 
     @db_session
