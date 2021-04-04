@@ -52,11 +52,6 @@ def orm(request):
         orm_fixture = ORMFixture(host=db_config["host"], db_name=db_config["name"], user=db_config["user"],
                                  password=db_config["password"])
 
-    #def fin():
-    #    db_fixture.destroy()
-
-    #request.addfinalizer(fin)
-
     return orm_fixture
 
 
