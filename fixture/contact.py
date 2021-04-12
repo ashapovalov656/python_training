@@ -111,10 +111,10 @@ class ContactHelper:
         self.app.open_homepage()
         self.contact_cache = None
 
-    def edit_contact_by_id(self, contact, id):
+    def edit_contact_by_id(self, contact):
         wd = self.app.wd
         self.app.open_homepage()
-        wd.find_element_by_xpath("//a[@href='edit.php?id=%s']" % id).click()
+        wd.find_element_by_xpath("//a[@href='edit.php?id=%s']" % contact.id).click()
         self.fill_contact_form(contact)
         wd.find_element_by_name("update").click()
         self.app.open_homepage()

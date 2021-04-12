@@ -8,7 +8,7 @@ def test_edit_contact_by_id(app, orm, check_ui):
     old_contacts = orm.get_contact_list()
     index = randrange(len(old_contacts))
     contact = Contact(id=old_contacts[index].id, firstname="Новое_имя", lastname="Новая_фамилия")
-    app.contact.edit_contact_by_id(contact, contact.id)
+    app.contact.edit_contact_by_id(contact)
     assert len(old_contacts) == len(orm.get_contact_list())
     new_contacts = orm.get_contact_list()
     old_contacts[index] = contact
